@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* BACKGROUND */
+#root {
+    position: relative; 
+    margin: 0; 
+    background-color: rgba(0, 0, 0, 1);
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    opacity: 0.8;
+    padding-bottom: 60px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#root::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1; 
+    opacity: 0.9;
+}
+
+.corpoHome {
+    display: flex;
+    height: 85vh;
+    opacity: 0.8;
+    cursor: url("./pages/IMG/cursor.png"), auto;
+}
+
+/* HOME */
+.esquerda_home {
+    display: grid;
+    margin-left: 10%;
+}
+
+.titulo_home {
+    align-self: center;
+    color: white;
+    font-size: 2.6rem; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 5%;
+}
+
+.txt_home {
+    color: white;
+    font-size: 1.3rem; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.direita_home {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;  
+    height: 200px;
+    width: 200px;
+    margin-left: 12%;
+}
+
+.btn_home {
+    border: 4px solid transparent;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.35); 
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    height: 200px;
+    width: 200px;
+    font-size: 2.5em;
+    font-weight: 540;
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.btn_home::before {
+    content: "";
+    position: absolute;
+    top: -4px; 
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 8px; 
+    z-index: -1;
+}
+
+.btn_home::after {
+    content: "";
+    position: absolute;
+    top: 4px; 
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border-radius: 8px; 
+    z-index: -2;
+}
+
+.btn_home:hover {
+    color: #fffefe;
+}
+
+.btn_home .btn_home_span {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.btn_text {
+    font-size: 1.4rem;  
+    margin-bottom: 1rem;  
+    transition: transform 0.4s ease-in-out; 
+}
+
+.btn_home:hover .btn_text {
+    transform: translateY(-100%); 
+}
+
+.btn_home:hover .btn_home_span {
+    background: rgba(36, 68, 60, 0.6);
+}
+
+/* Botões customizados */
+#btn_home_comandos, #btn_home_relatorios, #btn_home_rtm, #btn_home_ferramentas {
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 200px;
+    font-size: 2.5em;
+    font-weight: 540;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Comandos */
+#btn_home_comandos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),
+        url(../src/pages/IMG/btn_comandos.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+#btn_home_comandos::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 100px;  
+    height: 100px; 
+    background-image: url(../src/pages/IMG/Logo\ comandos.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: brightness(100) invert(1);
+    z-index: 0;
+}
+#btn_home_comandos:hover::before {
+    opacity: 0.8;
+}
+
+/* Relatórios */
+#btn_home_relatorios::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),
+        url(../src/pages/IMG/btn_relatorios.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+#btn_home_relatorios::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;  
+    height: 100px;
+    background-image: url(../src/pages/IMG/Logo\ relatorios.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+#btn_home_relatorios:hover::before {
+    opacity: 0.8;
+}
+
+/* RTM */
+#btn_home_rtm::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),
+        url(../src/pages/IMG/btn_rtm.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    
+}
+#btn_home_rtm::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px; 
+    background-image: url(../src/pages/IMG/Logo\ rtm.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: brightness(100) invert(1);
+    z-index: 0;
+}
+#btn_home_rtm:hover::before {
+    opacity: 0.8;
+}
+
+/* Ferramentas */
+#btn_home_ferramentas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), 
+        url(../src/pages/IMG/btn_ferramentas.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#btn_home_ferramentas::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px; 
+    background-image: url(../src/pages/IMG/Logo\ ferramentas.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: brightness(100) invert(1);
+    z-index: 0;
+}
+#btn_home_ferramentas:hover::before {
+    opacity: 0.7;
+}
+
+/* FIM HOME */
+
+/* PAGE FOOTER */
+.site-footer {
+    background-color: #222222;
+    font-size: 16px;
+    color: #737373;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 10;
+}
+
+.footerText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 100%;
+}
+
+.site-footer .social-icons {
+    text-align: center;
+}
+
+.site-footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    margin-right: 0;
+    border-radius: 100%;
+    background-color: #33353d;
+}
+
+@media (max-width: 767px) {
+    .site-footer {
+        padding-bottom: 0;
+    }
+
+    .site-footer .social-icons {
+        text-align: center;
+        text-decoration: none;
+    }
+}
+
+.social-icons {
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-bottom: 1px;
+    margin-top: 5px;
+    padding-inline: 10px;
+}
+
+.social-icons a {
+    background-color: #eceeef;
+    color: #818a91;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    transition: all 0.2s linear;
+}
+
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+    color: #fff;
+    background-color: #29aafe;
+}
+
+.social-icons a.linkUca:hover {
+    background-color: #641185;
+}
+
+.social-icons a.linkUca {
+    background-image: url(../src/pages/IMG/logo\ uca.png);
+    background-size: cover;
+}
+
+.social-icons a.linkAjuda:hover {
+    background-color: #3961e6;
+}
+
+.social-icons a.linkAjuda {
+    background-image: url(../src/pages/IMG/Screenshot_1.png);
+    background-size: cover;
+}
+
+.social-icons a.linkSpice:hover {
+    background-color: #b42828;
+}
+
+.social-icons a.linkSpice {
+    background-image: url(../src/pages/IMG/logo\ spice.png);
+    background-size: 90%; 
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+/* FIM PAGE FOOTER */

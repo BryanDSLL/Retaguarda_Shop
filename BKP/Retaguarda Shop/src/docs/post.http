@@ -1,0 +1,10 @@
+POST https://672e4eeb229a881691efaeb3.mockapi.io/API/retaguardashop/Retaguardashop
+Content-Type: application/json
+
+{
+  "nritem": "1",
+  "descricao": "MANUAL SPED",
+  "dtcriacao": "11/11/2024",
+  "link": "https://docs.google.com/document/d/1Rj_sQQAkyY2DmiVba5QRdeLKDhdZTANj-EHhFXr1H94/edit?usp=sharing",
+  "tipo": "Relatorio"
+}
