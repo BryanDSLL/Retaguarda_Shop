@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import 'bulma/css/bulma.min.css';
 import PageFooter from '../components/PageFooter';
-import Card from '../components/Card';
+import CardRelatorios from '../components/CardRelatorios';
 
 const Relatorios = () => {
   useEffect(() => {
@@ -10,7 +10,7 @@ const Relatorios = () => {
   return (
     <>
 
-    <Card />
+    <CardRelatorios />
 
 
     <PageFooter />
